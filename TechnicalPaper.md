@@ -6,20 +6,20 @@ Ticket, Lot number etc. They are the blueprint for the objects which hold the in
 have some attributes like Ticket No., Date, CarType, parkingLotLocation etc. 
 * The **Controller** is responsible for accepting the input and then changing the state of the objects, i.e. making changes to the
 attributes of the objects(Models). Then the Model conveys those changes to the **View** via the network and the View then responds to 
-the changes.[1]
+the changes.**[1]**
 * In the traditional structure, this connection to View was continuous. This followed the **Observer Pattern** where there are
 **Subscribers**, and they are subscribed to **Publishers** who are the source of the changes. The subscribers, View in this case, respond
-to the changes and changes the layout of the pages.[2] But later in the Spring MVC, the connection was deliberate via **HTTP** calls[3] and there
-was no need of maintaining the continuous connection. This was because the traditional MVC was followed for applications run on the local
+to the changes and changes the layout of the pages. **[2]** But later in the Spring MVC, the connection was deliberate via **HTTP** calls and there
+was no need of maintaining the continuous connection. **[3]** This was because the traditional MVC was followed for applications run on the local
 machines where the objects shared the same memory space whereas Spring is used for web applications, hence there was a move to distributive
-which made the move to HTTP calls natural.[4]
+which made the move to HTTP calls natural.**[4]**
 
 ##### Spring MVC
 In the modern sense, the spring applications don't have the logic for the maintenance of the View in the same repo as the controller and the
 models. Because the requests are now stateless, there is a need of persistent memory to store the info of the model states. This is the 
 **Repository** layer and there sits a new layer called **Service** later which takes the request from the controller, gets/modifies the data
 in the Repository(database) and delivers the results to the controller. Then the controller use a **Data Transfer Object(DTO)** to transfer the 
-changes to the front-end which is connected to the back-end(Spring Application) via an API.[5][6]
+changes to the front-end which is connected to the back-end(Spring Application) via an API.**[5][6]**
 
 
 References:
